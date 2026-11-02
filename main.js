@@ -12,11 +12,16 @@ inputElement.addEventListener('input', function () {
     animate: checkAnimateElement.checked,
     hide: checkHideElement.checked
   }
-  if (this.value === '') {
-    progress(circleElement, 0, options)
-    return
+  let value = inputElement.value === '' ? 0 : parseInt(inputElement.value, 10)
+
+  if (isNaN(value)) return
+
+  if (value < 0) {
+    value = 0
+  } else if (value > 100) {
+    value = 100
   }
-  const value = parseInt(this.value, 10)
+
   progress(circleElement, value, options)
 })
 
@@ -25,11 +30,16 @@ checkAnimateElement.addEventListener('change', function () {
     animate: checkAnimateElement.checked,
     hide: checkHideElement.checked
   }
-  if (inputElement.value === '') {
-    progress(circleElement, 0, options)
-    return
+  let value = inputElement.value === '' ? 0 : parseInt(inputElement.value, 10)
+
+  if (isNaN(value)) return
+
+  if (value < 0) {
+    value = 0
+  } else if (value > 100) {
+    value = 100
   }
-  const value = parseInt(inputElement.value, 10)
+
   progress(circleElement, value, options)
 })
 
@@ -38,11 +48,16 @@ checkHideElement.addEventListener('change', function () {
     animate: checkAnimateElement.checked,
     hide: checkHideElement.checked
   }
-  if (inputElement.value === '') {
-    progress(circleElement, 0, options)
-    return
+  let value = inputElement.value === '' ? 0 : parseInt(inputElement.value, 10)
+
+  if (isNaN(value)) return
+
+  if (value < 0) {
+    value = 0
+  } else if (value > 100) {
+    value = 100
   }
-  const value = parseInt(inputElement.value, 10)
+
   progress(circleElement, value, options)
 })
 
