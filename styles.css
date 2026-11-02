@@ -25,6 +25,25 @@
 
 .progress {
   flex: 0 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-container {
+  width: 200px;
+  height: 200px;
+}
+
+.circle-container--spinning {
+  animation: rotation 1s linear infinite;
+}
+
+.circle {
+  fill: none;
+  stroke: blue;
+  stroke-width: 4;
+  transition: stroke-dasharray 0.5s ease-out, stroke-dashoffset 0.5s ease;
 }
 
 .options {
@@ -80,4 +99,9 @@
 
 .option__switch:checked::before {
   left: calc(100% - 2px - 20px);
+}
+
+@keyframes rotation {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
 }
