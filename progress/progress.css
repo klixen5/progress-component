@@ -1,4 +1,8 @@
 .progress-indicator__container {
+  --progress-accent: #005BFF;
+  --progress-track: #EFF3F6;
+  --switch-inactive: #E0E6EF;
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -34,15 +38,22 @@
 
 .progress-indicator__circle {
   fill: none;
-  stroke: blue;
+  stroke: var(--progress-accent);
   stroke-width: 4;
   transition: stroke-dasharray 0.5s ease-out, stroke-dashoffset 0.5s ease;
+}
+
+.progress-indicator__circle-track {
+  fill: none;
+  stroke: var(--progress-track);
+  stroke-width: 4;
 }
 
 .progress-indicator__options {
   flex: 0 1 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 10px
 }
@@ -68,13 +79,13 @@
   width: 40px;
   height: 25px;
   border: 1px solid gray;
-  background-color: #c7e3f1;
+  background-color: var(--switch-inactive);
   border-radius: 999px;
   transition: background-color 0.2s ease;
 }
 
 .progress-indicator__option__switch:checked {
-  background-color: cornflowerblue;
+  background-color: var(--progress-accent);
 }
 
 .progress-indicator__option__switch::before {
@@ -102,7 +113,6 @@
 @media (orientation: landscape) {
   .progress-indicator__container {
     flex-direction: row;
-    align-items: center;
     width: 568px;
     height: 320px;
   }

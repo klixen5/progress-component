@@ -8,9 +8,9 @@ function progress(circleElement, value, { animate = false, hide = false } = {}) 
   }
 
   if (hide) {
-    circleElement.style.display = 'none'
+    circleElement.closest('svg').style.visibility = 'hidden'
   } else {
-    circleElement.style.display = ''
+    circleElement.closest('svg').style.visibility = ''
   }
 }
 
