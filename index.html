@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Progress</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./progress/progress.css">
   <script type="module" src="./main.js"></script>
 </head>
 <body>
-<div class="container">
-  <h1 class="title">Progress</h1>
-  <div class="progress">
-    <svg class="circle-container" viewBox="0 0 100 100">
+<div class="progress-indicator__container">
+  <h1 class="progress-indicator__title">Progress</h1>
+  <div class="progress-indicator__progress">
+    <svg class="progress-indicator__circle-container" viewBox="0 0 100 100">
       <circle
-        class="circle"
+        class="progress-indicator__circle"
         cx="50"
         cy="50"
         r="30"
@@ -22,18 +23,18 @@
       />
     </svg>
   </div>
-  <div class="options">
-    <div class="option">
-      <input id="value" class="option__value" type="text" value="60">
-      <label for="value" class="option__label">Value</label>
+  <div class="progress-indicator__options">
+    <div class="progress-indicator__option">
+      <input id="value" class="progress-indicator__option__value" type="text" value="60">
+      <label for="value" class="progress-indicator__option__label">Value</label>
     </div>
-    <div class="option">
-      <input id="animate" class="option__switch" type="checkbox">
-      <label for="animate" class="option__label">Animate</label>
+    <div class="progress-indicator__option">
+      <input id="animate" class="progress-indicator__option__switch" type="checkbox">
+      <label for="animate" class="progress-indicator__option__label">Animate</label>
     </div>
-    <div class="option">
-      <input id="hide" class="option__switch" type="checkbox">
-      <label for="hide" class="option__label">Hide</label>
+    <div class="progress-indicator__option">
+      <input id="hide" class="progress-indicator__option__switch" type="checkbox">
+      <label for="hide" class="progress-indicator__option__label">Hide</label>
     </div>
   </div>
 </div>
