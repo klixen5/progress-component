@@ -79,7 +79,6 @@
   position: relative;
   width: 40px;
   height: 25px;
-  border: 1px solid gray;
   background-color: var(--switch-inactive);
   border-radius: 999px;
   transition: background-color 0.2s ease;
